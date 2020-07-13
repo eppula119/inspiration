@@ -1,0 +1,9 @@
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　フッター部分　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.p-footerMenu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  & :nth-last-child(2) {
+    margin: 0 $space_3l;
+  }
+}

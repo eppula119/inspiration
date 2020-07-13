@@ -1,0 +1,309 @@
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　アイディア一覧　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+#ideas {
+  position: relative;
+  top: $space_10l;
+  width: 90%;
+  margin: 0 auto;
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　カテゴリー一覧　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+  .p-category, .p-refine {
+    background: $color_main;
+    width: 15%;
+    position: relative;
+    z-index: 1;
+    padding: $space_xl $space_l;
+    box-sizing: border-box;
+    border-radius: 5px;
+    @include mq('tab') {
+      position: static;
+      width: auto;
+      background: $color_light100;
+      padding: 0;
+      margin-bottom: $space_3l;
+    }
+  }
+  .p-category {
+    border: solid 1px $color_dark050;
+    text-align: center;
+    @include mq('tab') {
+      background: $color_light100;
+      width: 100%;
+      position: static;
+      padding: 0;
+      margin-bottom: $space_3l;
+      }
+    .p-category__items {
+      display: block;
+      width: 100%;
+      background-color: $color_light100;
+      border-radius: 3px;
+      @include mq('tab') {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      @include mq(){
+        flex-wrap: wrap;
+        padding: $space_m;
+        box-sizing: border-box;
+      }
+    }
+    .p-categoryItem:nth-child(1) {
+      background-color: $color_dark050;
+      padding: $space_l $space_m;
+      margin: 0 auto;
+      border-radius: 3px 3px 0 0;
+      @include mq('tab') {
+        background-color: $color_sub;
+        box-sizing: border-box;
+        margin: 0;
+      }
+      @include mq(){
+        margin-bottom: $space_m;
+        width: 100%;
+      }
+    } 
+    .p-categoryItem:nth-child(n+2) {
+      padding: $space_m;
+      width: 85%;
+      box-sizing: border-box;
+      margin: 0 auto;
+      border-bottom: solid 1px $color_dark025;
+      @include mq('tab') {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        margin: 0;
+        border-radius: 5px;
+      }
+      @include mq(){
+        width: 30%;
+        margin-bottom: $space_m;
+        border: solid 1px $color_dark025;
+      }
+    }
+    .p-categoryItem:nth-child(n+8) {
+      border-radius: 0 0 3px 3px;
+      border-bottom: none;
+      @include mq('tab') {
+        border: solid 1px $color_dark025;
+        border-radius: 5px;
+      }
+    }
+    
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　絞り込み画面　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+  }
+  .p-refine {
+    top: $space_6l;
+    .p-refineForm {
+      @include mq('tab') {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+      }
+      @include mq(){
+        width: 100%;
+      }
+      &__select, .p-searchBtn {
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        height: 40px;
+      }
+      &__select {
+        margin-bottom: $space_m;
+        @include mq('tab') {
+          background: $color_light100;
+          width: 30%;
+          vertical-align: sub;
+          border-radius: 3px;
+          border: solid 1px $color_dark025;
+          margin: 0;
+        }
+        @include mq(){
+          width: 35%;
+        }
+      }
+      .p-searchBtn {
+          margin-top: $space_xl;
+          padding: 0;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color .4s, color .4s;
+          @include mq('tab') {
+            width: 30%;
+            margin-top: 0;
+          }
+          @include mq(){
+            width: 20%;
+            margin: 0;
+          }
+          &:hover {
+            background-color: $color_btn--hover;
+            color: $color_light100;
+            margin-bottom: 3px; //ボタン押下後、下へ3px移動し親要素の高さが動的に変わるのを防ぐため
+          }
+      }
+    }
+  }
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　各アイディア表示　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+  .p-ideas {
+    width: 78%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    @include mq('tab') {
+      width: auto;
+      position: static;   
+    }
+    .p-idea {
+      width: 30%;
+      height: 300px;
+      margin-bottom: $space_3l;
+      position: relative;
+      @include mq('tab') {
+        width: 47%; 
+      }
+      @include mq(){
+        width: 100%;
+      }
+      &__img {
+        width: 100%;
+        height: 60%;
+        border-radius: 3px 3px 0 0;
+      }
+      .p-itemCover {
+        height: 60%;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, .6);
+        border-radius: 3px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transition: all .7s;
+        -webkit-transition: all .7s;
+        color: $color_light100;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__outline {
+          padding: 0 $space_l;
+        }
+        &__link {
+          color: $color_light100;
+        }
+        &__icon {
+          font-size: $font-size_m;
+          vertical-align: middle;
+        }
+      }
+      .p-itemCover:hover {
+        opacity: 1;
+        transform: all .7s;
+      }
+      &__wrap {
+        border: solid 1px $color_dark025;
+        border-top: none;
+        height: 40%;
+        border-radius: 0 0 3px 3px;
+        .p-ideaTitle {
+          font-size: $font-size_m;
+          padding: $space_m;
+          box-sizing: border-box;
+
+        }
+        .p-ideaCategory, .p-ideaDay {
+          display: inline-block;
+          width: 42%;
+          background-color: $color_sub;
+          padding: $space_s;
+          box-sizing: border-box;
+          margin-bottom: $space_m;
+        }
+        .p-ideaCategory {
+          margin-left: $space_m;
+        }
+        .p-ideaDay {
+          float: right;
+          margin-right: $space_m;
+        }
+        .p-ideaStar {
+          margin-left: $space_m;
+          height: 30px;
+          @include mq('tab') {
+            font-size: $font-size_2l;
+            margin-right: $space_s;
+          }
+        }
+        .p-ideaMouth {
+          display: inline-block;
+          font-size: $font-size_xs;
+          height: 30px;
+          line-height: 3.6rem;
+          vertical-align: baseline;
+          @include mq('tab') {
+            font-size: $font-size_m;
+          }
+        }
+        .p-ideaPrice {
+          display: inline-block;
+          float: right;
+          margin-right: $space_m;
+          font-size: $font-size_xl;
+          height: 30px;
+        }
+      }
+    }
+    .p-idea:nth-of-type(n+7) {
+      margin: 0;
+    }
+  }
+  
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　ページネーション部分　＝＝＝＝＝＝＝＝＝＝＝
+  .p-ideasPage {
+    position: absolute;
+    top: calc( (3 * 330px) - 30px ); // (アイデア１個の高さ * 3列）- ３列目のmargin-bottomは0px 
+    right: 0;
+    width: 78%;
+    margin-top: $space_8l;
+    @include mq('tab') {
+      position: static;   
+      margin: 0 auto;
+      margin-top: $space_8l;
+    }
+  }
+}
+
+// ＝＝＝＝＝＝＝＝＝　購入済みアイディア一覧画面(あとでvueでクラス名動的に変更できるか確認) ＝＝＝＝＝＝＝＝＝＝＝
+// #idea {
+//   /*position: relative; */
+//   /* top: 60px; */
+//   width: 70%;
+//   margin: 0 auto;
+//   .p-ideas {
+//     width: 100%;
+//     /* position: absolute; */
+//     /* top: 0; */
+//     /* right: 0; */
+//     margin: 0 auto;
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//   }
+//   .p-ideaPage {
+//     position: absolute; */
+//     /* top: calc( (3 * 330px) - 30px ); */
+//     /* right: 0; */
+//     width: 100%;
+//     margin: 0 auto;
+//     margin-top: 80px;
+//     /* margin: 0 auto;
+//   }
+// }

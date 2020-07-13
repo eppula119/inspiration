@@ -1,0 +1,139 @@
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　ヘッダー部分　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.p-heading, .p-postWidth {
+  width: 45%;
+  margin: 0 auto;
+  @include mq('tab') {
+    width: 80%;
+  }
+}
+.p-heading {
+  width: 18%;
+  line-height: 2.4;
+  margin-top: $space_8l;
+  margin-bottom: $space_8l;
+  font-size: $font-size_2l;
+  text-align: center;
+  border-bottom: solid 1px $color_dark050;
+  @include mq('tab') {
+    width: 80%;
+  }
+}
+.p-newIdea {
+  overflow: hidden;
+  &__title {
+    display: block;
+    width: 100%;
+    padding: $space_m;
+    font-size: $font-size_xxl;
+    border: solid 1px $color_dark025;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: $space_5l;
+    @include mq() {
+      font-size: $font-size_s;
+    }
+  }
+  &__category {
+    width: 30%;
+    height: 40px;
+    border: solid 1px $color_dark025;
+    margin-bottom: $space_6l;
+    font-size: $font-size_l;
+    background-color: $color_light100;
+    border-radius: 5px;
+    @include mq() {
+      width: 50%;
+      font-size: $font-size_s;
+    }
+  }
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　画像アップロード部分　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+  .p-fileContainer, .p-fileWrap .p-fileContainerSub {
+    &__airDrop {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      text-align: center;
+      background-color: $color_main;
+      opacity: 0.3;
+      border-radius: 5px;
+      .p-dropImg {
+        opacity: 0;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+      }
+      .p-outputImg {
+        height: 100%;
+        position: absolute;
+        left: 0;
+        &__img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .p-fileContainer {
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    &__airDrop {
+      line-height: 200px;
+    }
+  }
+  .p-fileWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: $space_4l;
+    margin-bottom: $space_10l;
+    flex-wrap: wrap;
+    .p-fileContainerSub {
+      width: 22%;
+      height: 150px;
+      @include mq() {
+        width: 47%;
+        margin-bottom: $space_5l;
+      }
+      &__airDrop {
+        line-height: 150px;
+        .p-dropImg {
+        }
+      }
+    }
+  }
+  &__outLine, &__content {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid $color_dark025;
+    border-radius: 5px; 
+    font-size: $font-size_l;
+  }
+  &__outLine { // ＝＝＝＝＝＝＝　概要部分　＝＝＝＝＝＝＝
+    height: 80px;
+  }
+  &__content, &__count, &__price {
+    margin-bottom: $space_5l;
+  }
+  &__count {
+    float: right;
+  }
+  &__price {
+    text-align: right;
+    font-size: $font-size_m;
+    .p-ideaPrice {
+      padding: $space_m;
+      font-size: $font-size_m;
+      text-align: right;
+      border: solid 1px $color_dark025;
+      border-radius: 5px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+  }
+  .p-deleteBtn {
+    margin-right: $space_3l;
+  }
+}

@@ -1,0 +1,64 @@
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　フォーム画面（認証系）　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.c-formTitle {
+  box-sizing: border-box;
+  font-size: $font-size_xxl;
+  padding: $space_5l;
+  padding-top: $space_7l;
+  padding-bottom: $space_4l;
+  text-align: center;
+  @include mq() {
+    font-size: $font-size_xs;
+  }
+}
+.c-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 60%;
+  @include mq() {
+    width: 80%;
+  }
+  &__input {
+    box-sizing: border-box;
+    margin: $space_l;
+    padding: $space_m 0;
+    padding-left: $space_s;
+    border: solid 1px $color_dark050;
+    border-radius: 8px;
+  }
+  &__label {
+    margin: 0 $space_l;
+    margin-top: $space_xl;
+    #c-formCheck {
+      vertical-align: bottom;
+    }
+  }
+  &__passlink {
+    text-align: right;
+    margin: 0 $space_l;
+  }
+  &__comment {
+    text-align: right;
+    margin: $space_m $space_l;
+    @include mq() {
+      text-align: left;
+    }
+  }
+}
+.c-passLink {
+  font-size: $font-size_xs;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: $color_dark100;
+    transition: all 0.3s ease 0s;
+  }
+  &:hover:after {
+    width: 100%;
+  }
+}

@@ -1,0 +1,84 @@
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　レビュー一覧　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+#idea {
+  //================　あとでvueでクラス名を動的に変更できるか　＝＝＝＝＝＝
+  // width: 70%;
+  // /* float: left; */
+  // margin: 0 auto;
+  // /* margin-left: 60px; */
+  // margin-top: 50px;
+  @include mq('tab') {
+    width: 80%;
+  }
+  .p-leadWidth {
+    width: 100%;
+  }
+  .p-ideaWrap {
+    overflow: hidden;
+    padding: $space_3l 0;
+    box-sizing: border-box;
+    letter-spacing: 5px;
+    &__star, &__review, &__mouth, &__price, &__category {
+      vertical-align: middle;
+      font-size: $font-size_3l;
+      @include mq('tab') {
+        font-size: $font-size_xl;
+      }
+      @include mq() {
+        font-size: $font-size_3l;
+      }
+    }
+    &__star {
+      margin-right: $space_s;
+      @include mq('tab') {
+        font-size: $font-size_2l;
+      }
+    }
+    &__mouth {
+      margin: 0 $space_xl;
+      @include mq('tab') {
+        margin: 0;
+      }
+    }
+    &__price {
+      margin-right: $space_5l;
+      @include mq('tab') {
+        margin-right: $space_3l;
+        font-size: $font-size_3l;
+      }
+      @include mq() {
+        display: block;
+        margin: $space_l 0;
+        font-size: $font-size_4l;
+
+      }
+    }
+    &__category {
+      letter-spacing: 0;
+      padding: $space_m $space_6l;
+      box-sizing: border-box;
+      font-size: $font-size_xs;
+      background-color: $color_main;
+      @include mq('tab') {
+        padding: $space_m $space_4l;
+      }
+      @include mq() {
+        display: inline-block;
+        padding: $space_s $space_m;
+      }
+    }
+  }
+  .p-ideaReview {
+    &__main{ 
+      overflow: hidden;
+      .p-reviewDay {
+        float: right;
+        padding: $space_s $space_xl;
+        box-sizing: border-box;
+        background-color: $color_sub;
+        border: none;
+        border-radius: 5px;
+      }
+    }
+  }
+  
+}

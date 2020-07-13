@@ -1,0 +1,13 @@
+{
+  "Category": "カテゴリー",
+  "Login": "ログイン",
+  "Name": "名前",
+  "Email": "メールアドレス",
+  "Password": "パスワード",
+  "Confirm password": "パスワード（確認）",
+  "Registration": "登録",
+  "Reset Password": "パスワード変更",
+  "Logout": "ログアウト",
+  "Registered.": "登録が完了しました。",
+  "Invalid operation was performed.": "無効な操作が実行されました。"
+}

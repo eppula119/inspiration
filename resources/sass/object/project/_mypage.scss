@@ -1,0 +1,300 @@
+.p-profContainer, .p-lead, .p-ideaContainer, .p-btnContainer, .p-favReviewItem {
+  width: 70%;
+  margin: 0 auto;
+  @include mq() {
+    width: 80%;
+  }
+}
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　プロフィール編集ボタン　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.p-profContainer {
+  overflow: hidden;
+  &__btn {
+    float: right;
+    padding: $space_s $space_3l;
+    color: $color_light100;
+    @include mq() {
+      float: none;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: $space_3l;
+    }
+    &:active {
+      margin-bottom: 3px; //ボタン押下後、下へ3px移動し親要素の高さが動的に変わるのを防ぐため
+    }
+  }
+}
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　購入済みアイディア＆投稿したアイディア一覧　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.p-lead {
+  padding-bottom: $space_m;
+  box-sizing: border-box;
+  margin-bottom: $space_4l;
+  border-bottom: solid 1px gray;
+  font-size: $font-size_xl;
+  @include mq() {
+    font-size: $font-size_m;
+  }
+}
+
+.p-ideaContainer {
+  display: flex;
+  justify-content: space-between;
+  @include mq('tab') {
+    flex-wrap: wrap;
+  }
+  .p-buyPostCard {
+    background-color: antiquewhite;
+    display: inline-block;
+    width: 22%;
+    height: 230px;
+    border-radius: 3px;
+    @include mq('tab') {
+      width: 47%;
+      margin-bottom: $space_2l;
+    }
+    @include mq() {
+      width: 100%;
+    }
+    &__img {
+      width: 100%;
+      height: 60%;
+      border-radius: 3px 3px 0 0;
+    }
+    &__wrap {
+      border: solid 1px $color_dark025;
+      border: none;
+      height: 40%;
+      border-radius: 0 0 3px 3px;
+    }
+    .p-ideaTitle {
+      font-size: $font-size_s;
+      padding: $space_s $space_m;
+      box-sizing: border-box;
+
+    }
+    .p-ideaCategory, .p-ideaDay {
+      display: inline-block;
+      width: 42%;
+      background-color: $color_sub;
+      padding: 3px;
+      box-sizing: border-box;
+      margin-bottom: $space_s;
+      text-align: center;
+    }
+    .p-ideaCategory {
+      margin-left: $space_m;
+    }
+    .p-ideaDay {
+      float: right;
+      margin-right: $space_m;
+    }
+    .p-ideaStar, .p-ideaMouth, .p-ideaPrice {
+      font-size: $font-size_m;
+    }
+    .p-ideaStar {
+      margin-left: $space_m;
+    }
+    .p-ideaMouth {
+      display: inline-block;
+    }
+    .p-ideaPrice {
+      display: inline-block;
+      float: right;
+      margin-right: $space_m;
+    }
+  }
+}
+.p-btnContainer {
+  overflow: hidden;
+  margin-top: $space_3l;
+  margin-bottom: $space_6l;
+  .p-btnAll {
+    float: right;
+    padding: $space_m $space_6l;
+    @include mq() {
+      float: none;
+      display: block;
+      margin: 0 auto;
+    }
+    &:active {
+      margin-bottom: 3px; //ボタン押下後、下へ3px移動し親要素の高さが動的に変わるのを防ぐため
+    }
+  }
+}
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　気になるリスト部分　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.p-favReviewItem {
+  height: 100px;
+  background: aliceblue;
+  overflow: hidden;
+  margin-bottom: $space_l;
+  @include mq('tab') {
+    height: 380px;
+  }
+  @include mq() {
+    height: 350px;
+  }
+  &__img {
+    width: 15%;
+    height: 100%;
+    float: left;
+    border-radius: 3px 0 0 3px;
+    @include mq('tab') {
+      height: 60%;
+      width: 100%;
+    }
+    @include mq() {
+      width: 100%;
+      height: 40%;
+    }
+  }
+  &__text {
+    width: 85%;
+    float: right;
+    padding: $space_l $space_3l;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 3px;
+    @include mq('tab') {
+      width: 100%;
+      float: none;
+      position: relative;
+    }
+    @include mq() {
+      width: 100%; 
+    }
+    .p-favTitle {
+      font-size: $font-size_2l;
+      @include mq('tab') {
+        margin-top: $space_m;
+      }
+      @include mq() {
+        display: block;
+        font-size: $font-size_s;
+        margin-bottom: $space_l;
+      }
+    }
+    .p-favCategory {
+      background: antiquewhite;
+      padding: $space_s $space_5l;
+      box-sizing: border-box;
+      border-radius: 5px;
+      vertical-align: super;
+      margin: 0 $space_2l;
+      @include mq('tab') {
+        width: 45%;
+        padding: $space_m $space_5l;
+        margin: 0;
+        float: right;
+      }
+      @include mq() {
+        float: none;
+        display: inline-block;
+        padding: $space_s;
+        margin-right: $space_s;
+        width: 45%;
+      }
+    }
+    .p-favStar {
+      font-size: $font-size_xl;
+      margin-right: 3px;
+      @include mq('tab') {
+        font-size: $font-size_4l;
+        margin-right: $space_s;
+        margin-top: $space_s;
+      }
+      @include mq() {
+        font-size: $font-size_m;
+      }
+    }
+    .p-favMouth {
+      font-size: $font-size_m;
+      margin-right: $space_l;
+      @include mq('tab') {
+        font-size: $font-size_2l;
+      }
+      @include mq() {
+        font-size: $font-size_s;
+        margin-right: 0;
+      }
+    }
+    .p-favPrice {
+      display: inline-block;
+      font-size: $font-size_2l;
+      float: right;
+      @include mq('tab') {
+        float: right;
+        margin-top: $space_s;
+      }
+      @include mq() {
+        float: none;
+        margin-top: $space_m;
+      }
+    }
+    .p-favOutline {
+      @include mq('tab') {
+        margin-top: $space_m;
+      }
+    }
+    // ＝＝＝＝＝＝＝＝＝＝＝＝＝ 購入者からのレビュー一覧　＝＝＝＝＝＝＝＝＝＝＝＝＝
+    .p-reviewTitle {
+      font-size: $font-size_2l;
+      @include mq() {
+        font-size: $font-size_s;
+        display: block;
+      }
+    }
+    .p-reviewContainer {
+      display: inline-block;
+      padding: 0 $space_4l;
+      box-sizing: border-box;
+      @include mq('tab') {
+        padding-left: 0;
+        margin: $space_s 0;
+      }
+      @include mq() {
+        padding: 0;
+        margin: $space_m 0;
+      }
+      &__star {
+        font-size: $font-size_2l;
+        margin-right: $space_l;
+        @include mq('tab') {
+          margin-right: $space_2l;
+        }
+        @include mq() {
+          font-size: $font-size_s;
+          margin-right: 0;
+        }
+      }
+    }
+    .p-reviewDay {
+      float: right;
+      background: $color_sub;
+      padding: $space_s $space_l;
+      border-radius: 5px;
+      margin-top: $space_s;
+      font-size: $font-size_xs;
+      @include mq('tab') {
+        position: absolute;
+        top: $space_l;
+        right: $space_3l;
+        padding: $space_s $space_3l;
+      }
+      @include mq() {
+        top: 40px;
+        padding: $space_s $space_m;
+        font-size: 1rem;
+      }
+    }
+    .p-reviewOutline {
+      @include mq('tab') {
+        margin-top: $space_s;
+        font-size: $font-size_xs;
+      }
+      @include mq() {
+        margin-top: $space_m;
+      }
+    }
+    
+  }
+}
+

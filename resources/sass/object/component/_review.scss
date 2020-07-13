@@ -1,0 +1,13 @@
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　レビュー（星）パーツ　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.c-star {
+  font-size: $font-size_s;
+  color: $color_star;
+  &--disabled {
+    color: $color_dark050;
+  }
+}
+.c-category, .c-day {
+  background-color: $color_sub;
+  border-radius: 5px;
+  text-align: center;
+}

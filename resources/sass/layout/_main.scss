@@ -1,0 +1,27 @@
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　メイン画面　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.l-main {
+  display: block;
+  height: 1000vh;
+  position: relative;
+  overflow: hidden;
+  @include mq() {
+    height: 1150vh;
+  }
+}
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　背景部分　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.l-bg {
+    background-image: url(/../images/login_background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &.l-bg::before {
+      content: '';
+      background-color: rgba(255,255,255,.6);
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      z-index: 0;
+      }
+  }

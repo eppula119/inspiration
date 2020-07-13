@@ -1,0 +1,164 @@
+//=============== ヒーローバナー  ========================
+.p-heroImg {
+  z-index: 1;
+  margin-bottom: $space_l;
+  width: 20%;
+  height: 30%;
+}
+.p-heroTitle {
+  z-index: 1;
+  color: $color_light100;
+  letter-spacing: 3px;
+  font-size: $font-size_l;
+}
+//=============== セクション１  ========================
+.p-serviceTitle {
+  text-align: center;
+  margin: $space_10l 0;
+  font-size: $font-size_3l;
+  letter-spacing: 20px;
+  // @include mq(sm) {
+  //     margin: $space_6l;
+  // }
+}
+.p-serviceImg1 {
+  width: 40%;
+  height: 250px;
+  margin-bottom: $space_6l;
+  margin-bottom: $space_3l;
+  padding-bottom: $space_m;
+  padding-left: $space_10l;
+  box-sizing: border-box;
+//       @include mq(sm) {
+//           width: 80%;
+//           padding-left: 0;
+//           display: block;
+//           margin: 0 auto;
+//           margin-bottom: $space_3l;
+//       }
+}
+.p-serviceWrap1 {
+  width: 60%;
+  float: right;
+  padding-right: $space_10l;
+  padding-left: $space_5l;
+  box-sizing: border-box;
+//       @include mq(sm) {
+//           padding: 0;
+//           float: none;
+//           margin: 0 auto;
+//           width: 80%;
+//       }
+  &__heading {
+    text-align: left;
+//       @include mq(sm) {
+//           float: none;
+//           width: 100%;
+//       }
+  }
+  &__text {
+    line-height: 2;
+    letter-spacing: 3px;
+//       @include mq(sm) {
+//           display: inline-block;
+//           width: 100%;
+//       }
+  }
+}
+.p-serviceWrap2 {
+  width: 52%;
+  float: left;
+  padding-left: $space_10l;
+  padding-right: $space_5l;
+  box-sizing: border-box;
+  //       @include mq() {
+  //           width: 55%;
+  //       }
+  //       @include mq(sm) {
+  //           padding: 0;
+  //           float: none;
+  //           margin: 0 auto;
+  //           width: 80%;
+  //       }
+  &__heading {
+    text-align: right;
+    //           @include mq(sm) {
+    //               text-align: left;
+    //               padding-top: $space_4l;
+    //               box-sizing: border-box;
+    //           }
+  }
+  &__text {
+    display: block;
+    position: relative;
+    float: right;
+    line-height: 2;
+    letter-spacing: 3px;
+//           @include mq(sm) {
+//               float: none;
+//           }
+  }
+}
+.p-serviceWrap1__heading, .p-serviceWrap2__heading {
+  font-size: $font-size_xl;
+  letter-spacing: 3px;
+  margin-bottom: $space_4l;
+  padding-bottom: $space_m;
+  box-sizing: border-box;
+  border-bottom: solid 1px;
+}
+.p-serviceImg2 {
+  width: 48%;
+  height: 250px;
+  padding-right: $space_10l;
+  box-sizing: border-box;
+  //       @include mq() {
+  //           width: 45%;
+  //       }
+  //       @include mq(sm) {
+  //           display: none;
+  //       }
+}
+//=============== セクション２、セクション３  ========================
+.p-registerWrap, .p-stepWrap {
+  width: 50%;
+  float: left;
+  &__heading {
+    font-size: $font-size_xl;
+    margin-bottom: $space_3l;
+  }
+  &__text {
+    line-height: 2;
+    font-size: $font-size_s;
+  }
+}
+.p-stepWrap {
+  color: $color_light100;
+  position: relative;
+  z-index: 1;
+}
+.p-registerImg, .p-stepImg {
+  width: 50%;
+  height: 300px;
+  border-radius: 3px;
+}
+.p-stepImg {
+  position: relative;
+  z-index: 1;
+}
+//=============== 今すぐ始めるボタン画面 ========================
+.p-startImg {
+  width: 150px;
+  padding-bottom: $space_3l;
+  box-sizing: border-box;
+}
+.p-startBtn {
+  padding: $space_xl $space_10l;
+  font-size: $font-size_m;
+  letter-spacing: 3px;
+  border: none;
+  background: $color_sub;
+  border-radius: 5px;
+
+}
+

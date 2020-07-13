@@ -1,0 +1,260 @@
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　アイディア詳細　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+#idea {
+  width: 60%;
+  float: left;
+  margin-left: $space_6l;
+  margin-top: 50px;
+  @include mq('tab') {
+    float: none;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  @include mq() {
+    width: 80%;
+  }
+  .p-ideaTitle {
+    font-size: 2rem;
+    margin-bottom: $space_m;
+  }
+  .p-ideaStar, .p-review {
+    font-size: $font-size_2l;
+    @include mq() {
+      font-size: $font-size_m;
+    }
+  }
+  .p-review {
+    margin-left: $space_m;
+    vertical-align: -0.1rem;
+  }
+  .p-favorite {
+    opacity: 1;
+    float: right;
+    background-color: $color_light100;
+    border: solid 1px $color_dark050;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    transition: background-color 0.6s, color 0.8s;
+    cursor: pointer;
+    &:hover {
+      background-color: $color_btn--hover;
+      color: $color_light100;
+    }
+    &--favorited {
+      background-color: $color_main;
+    }
+  }
+  .p-ideaImg1 {
+    width: 100%;
+    display: block;
+    height: 300px;
+    margin: $space_l 0;
+    border-radius: 3px;
+  }
+  .p-subImg {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $space_5l;
+    @include mq('tab') {
+      flex-wrap: wrap;
+    }
+    &__sub {
+      border-radius: 3px;
+      width: 18%;
+      height: 100px;
+      @include mq('tab') {
+        width: 47%;
+        margin-bottom: $space_m;
+      }
+      @include mq() {
+        width: 100%;
+      }
+    }
+  }
+  .p-ideaOutline {  // ＝＝＝＝＝＝＝＝　概要部分　＝＝＝＝＝＝＝＝
+    font-size: $font-size_xl;
+    margin-bottom: $space_5l;
+  }
+  .p-ideaContent {
+    margin-bottom: $space_5l;
+  }
+  .p-ideaReview {
+    border: solid 1px $color_dark050;
+    padding: 0 $space_xl;
+    border-radius: 5px;
+    @include mq('tab') {
+      margin-bottom: $space_10l;
+    }
+    &__head {
+      border-bottom: solid 1px $color_dark050;
+      overflow: hidden;
+      padding: $space_3l 0;
+      box-sizing: border-box;
+      @include mq() {
+        padding: $space_xl 0;
+        position: relative;
+      }
+      .p-ideaMouth, .p-reviewStar,.p-review {
+        font-size: $font-size_s;
+      }
+      .p-ideaMouth {
+        @include mq() {
+          display: block;
+          margin-bottom: $space_s;
+        }
+      }
+      .p-btnPost {
+        opacity: 1;
+        float: right;
+        background-color: $color_main;
+        border-radius: 5px;
+        padding: $space_s $space_l;
+        box-sizing: border-box;
+        transition: opacity .8s;
+        @include mq() {
+          position: absolute;
+          top: 20px;
+          right: 0;
+        }
+        cursor: pointer;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+    &__main {
+      border-bottom: solid 1px $color_dark050;
+      padding-top: $space_3l;
+      box-sizing: border-box;
+      .p-reviewUser {
+        font-size: $font-size_3l;
+        margin-right: $space_s;
+      }
+      .p-userName {
+        font-size: $font-size_s;
+        margin-right: $space_m;
+      }
+      .p-reviewText {
+        padding: $space_m 0;
+        box-sizing: border-box;
+      }
+    }
+    .p-reviewMore {
+      margin: $space_xl 0;
+      &:active {
+        margin-bottom: calc( #{$space_xl} + 3px); //ボタン押下後、下へ3px移動し親要素の高さが動的に変わるのを防ぐため
+      }
+    }
+  }
+}
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　セクション「buy」　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.p-buyProfWrap {
+  @include mq('tab') {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+#buy, #profile {
+  background: $color_main;
+  width: 25%;
+  float: right;
+  box-sizing: border-box;
+  margin-right: $space_6l;
+  border-radius: 5px;
+  @include mq('tab') {
+    float: none;
+    margin-right: 0;
+    margin: 0 auto;
+    width: 60%;
+  }
+  @include mq() {
+    width: 80%;       
+  }
+}
+#buy {
+  margin-top: $space_5l;
+  text-align: center;
+  padding: $space_5l 0;
+  margin-bottom: $space_10l;
+  @include mq('tab') {
+    margin-top: $space_8l;
+    padding: $space_3l 0;
+  }
+  .p-buyPrice {
+    font-size: $font-size_2l;
+    margin-bottom: $space_m;
+  }
+  .p-buyBtn {
+    padding: $space_m $space_6l;
+    box-sizing: border-box;
+    background-color: $color_light100;
+    &:active {
+      margin-bottom: 3px; //ボタン押下後、下へ3px移動し親要素の高さが動的に変わるのを防ぐため
+    }
+  }
+  
+}
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　セクション「profile」　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+#profile {
+  padding: $space_xl;
+  @include mq('tab') {
+    padding: $space_xl $space_4l;
+  }
+  @include mq() {
+    padding: $space_xl;        
+  }
+  .p-profileTitle {
+    text-align: center;
+    font-size: $font-size_s;
+  }
+  .p-profileIcon {
+    width: 150px;
+    height: 150px;
+    background-color: $color_light100;
+    margin: 0 auto;
+    border-radius: 800px;
+    position: relative;
+    @include mq('tab') {
+      float: left;
+      margin-right: $space_xl;
+    }
+    @include mq() {
+      float: none;
+      margin: 0 auto;       
+    }
+    &__icon {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      width: 38%;
+      height: 75px;
+      font-size: $font-size_7l;
+    }
+  }
+  .p-profileReview {
+    font-size: $font-size_2l;
+    text-align: center;
+    padding: $space_m 0;
+    box-sizing: border-box;
+    @include mq('tab') {
+      display: inline-block;
+    }
+    @include mq() {
+      display: block;  
+    }
+    &__star {
+      font-size: $font-size_2l;
+      color: $color_dark100;
+      margin-right: $space_s;
+    }
+  }
+  .p-profileContent {
+    padding: 0 $space_xl;
+    box-sizing: border-box;
+  }
+}

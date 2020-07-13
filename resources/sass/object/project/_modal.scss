@@ -1,0 +1,143 @@
+.p-modal_coment {
+  line-height: 1.6;
+  position: absolute;
+  width: 35%;
+  height: 20%;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 20%;
+  left: 0;
+  @include mq (sp) {
+    width: 60%;
+  }
+
+  &__bold {
+    font-size: $font-size_m;
+  }
+}
+
+.p-modal_btn {
+  width: 50%;
+  height: 30%;
+  padding: 0;
+  background-color: $color_light100;
+  border: none;
+  position: absolute;
+  bottom:0;
+  right: 0;
+  border-top: solid 1px $color_dark075;
+  @include mq (sp) {
+    width: 100%;
+    height: 15%;
+  }
+
+}
+.p-modal_btn:nth-child(3) {
+  @include mq (sp) {
+    top: 70%;
+    width: 100%;
+    height: 15%;
+  }
+}
+
+.p-modal_btn:nth-child(2) {
+  left: 0;
+  border-right: solid 1px $color_dark075;
+
+}
+
+.p-modal {
+ &_cancel {
+  display: block;
+  margin: 0 0 0 auto;
+  color: $color_dark075;
+
+}
+&_title {
+  color: $color_dark075;
+  display: flex;
+  align-items: center;
+  font-size: $font-size_3l;
+  margin-top: $space_m;
+  @include mq(sp) {
+    font-size: $font-size_l;
+   }
+
+  &::before, &::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background: #444;
+    display: block;
+  }
+  &::before {
+    margin-right: 1rem;
+  }
+  &::after {
+    margin-left: 1rem;
+  }
+}
+
+&_star {
+  margin-top: $space_5l;
+  color: $color_dark050;
+  font-size: $font-size_xl;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  @include mq (sp) {
+    font-size: $font-size_m;
+  }
+
+ &__input {
+    display: none;
+  }
+
+ &__label {
+   margin: 0 $space_l;
+   cursor: pointer;
+ }
+
+ &__label:hover, &__label:hover ~ label, &__input:checked ~ label {
+   color: $color_star;
+ }
+
+}
+
+&_input {
+    display: block;
+    margin: $space_2l auto;
+    width: 60%;
+    border: none;
+    border-bottom: 1px solid $color_dark050;
+    @include mq (sp) {
+    width: 80%;
+  }
+
+}
+
+&_text {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    height: 40%;
+    border: 1px solid $color_dark050;
+    @include mq (sp) {
+    width: 80%;
+  }
+}
+
+&_submit {
+    display: block;
+    margin: 0 auto;
+    margin-top: $space_l;
+    height: $space_3l;
+    color: $color_dark075;
+    font-size: $font-size_xs;
+    width: 10%;
+    @include mq (sp) {
+    width: 20%;
+  }
+}
+}

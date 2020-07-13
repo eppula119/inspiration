@@ -1,0 +1,85 @@
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　プロフィール部分　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.p-profHeading {
+  width: 25%;
+  @include mq('tab') {
+    width: 80%;
+  }
+}
+.p-profile {
+  overflow: hidden;
+  &__name, &__content, &__email, &__nowPass, &__newPass, &__rePass {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid $color_dark025;
+    border-radius: 5px;
+  }
+  &__name, &__count, &__nowPass {
+    margin-bottom: $space_5l;
+  }
+  &__name {
+    padding: $space_xl $space_m;
+    font-size: $font-size_m;
+  }
+  .p-profileImgContainer {
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: $space_6l;
+    &__airDrop {
+      display: block;
+      margin: 0 auto;
+      width: 55%;
+      height: 100%;
+      position: relative;
+      text-align: center;
+      border: solid 1px $color_dark025;
+      border-radius: 100px;
+      line-height: 200px;
+      font-size: $font-size_s;
+      .p-userIcon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 50%;
+        opacity: 0.1;
+        font-size: $font-size_8l;
+      }
+    }
+    .p-profileImg {
+      opacity: 0;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+    }
+    &__msg {
+      text-align: center;
+      margin-top: $space_m;
+    }
+  }
+  &__content, &__email, &__nowPass, &__newPass, &__rePass {
+    padding: $space_m;
+  }
+  &__email, &__newPass, &__rePass {
+    margin-bottom: $space_3l;
+  }
+  &__count {
+    display: block;
+    text-align: right;
+  }
+  &__dialog {
+    display: block;
+    margin-bottom: $space_m;
+    font-size: $font-size_xs;
+  }
+  &__btn {
+    float: right;
+    width: 25%;
+    padding: $space_l;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,23 @@
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　ユーザー登録　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.p-form {
+  height: 100vh;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.p-formContainer {
+  width: 70%;
+  height: 78%;
+  background: rgb(255, 255, 255, 0.8);
+  border: solid 1px $color_dark050;
+  border-radius: 8px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  @include mq() {
+    width: 80%;
+  }
+}

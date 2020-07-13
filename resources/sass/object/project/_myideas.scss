@@ -1,0 +1,156 @@
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝　投稿済みアイディア一覧　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+.p-postHeading, .p-postContainer {
+  width: 70%;
+  margin: 0 auto;
+  @include mq('tab') {
+    width: 80%;
+  }
+}
+.p-postHeading {
+  line-height: 2.4;
+  margin-top: $space_8l;
+  margin-bottom: $space_8l;
+  font-size: $font-size_2l;
+  border-bottom: solid 1px #C9D0D6;
+  @include mq() {
+    font-size: $font-size_xl;
+  }
+}
+.p-postContainer {
+  .p-postIdea {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: $space_6l;
+    border: solid 1px $color_dark050;
+    border-radius: 3px;
+    @include mq() {
+      width: 100%;
+      height: 380px;
+    }
+    &__img {
+      width: 35%;
+      height: 100%;
+      float: left;
+      @include mq() {
+        width: 100%;
+        height: 40%;
+        float: none;
+      }
+    }
+    &__text {
+      width: 65%;
+      height: 100%;
+      float: right;
+      position: relative;
+      padding: $space_m $space_4l;
+      box-sizing: border-box;
+      @include mq() {
+        width: 100%;
+        height: 60%;
+        float: none;
+        padding: $space_l;
+      }
+      .p-postTitle {
+        font-size: $font-size_2l;
+        display: block;
+        margin-top: $space_4l;
+        margin-bottom: $space_m;
+        @include mq('tab') {
+          font-size: $font-size_l;
+        }
+        @include mq() {
+          margin-top: $space_l;
+          font-size: $font-size_m;
+        }
+      }
+      .p-postPrice {
+        display: inline-block;
+        font-size: $font-size_4l;
+        margin-right: $space_6l;
+        vertical-align: middle;
+        @include mq('tab') {
+          font-size: $font-size_3l;
+          margin-right: $space_3l;
+        }
+        @include mq() {
+          font-size: $font-size_xxl;
+          margin-right: 10%;
+        }
+      }
+      .p-favStar {
+        font-size: $font-size_3l;
+        margin-right: $space_s;
+        vertical-align: middle;
+        @include mq() {
+          font-size: $font-size_xl;
+          margin-right: 3px;
+        }
+      }
+      .p-favReview {
+        font-size: $font-size_2l;
+        vertical-align: middle;
+        @include mq() {
+          font-size: $font-size_s;
+        }
+      }
+      .p-postCategory {
+        padding: $space_l $space_6l;
+        background-color:$color_sub;
+        border-radius: 5px;
+        @include mq('tab') {
+          padding: $space_m $space_3l; 
+        }
+        @include mq() {
+          padding: $space_m $space_l;
+        }
+      }
+      .p-postOutline {
+        margin-top: $space_l;
+        font-size: $font-size_s;
+        @include mq('tab') {
+          font-size: $font-size_xs; 
+        }
+        @include mq() {
+          font-size: $font-size_default;
+        }
+      }
+      .p-detailBtn {
+        opacity: 1;
+        position: absolute;
+        bottom: -1px;
+        right: -1px;
+        padding: $space_s $space_6l;
+        color: $color_light100;
+        border-bottom: none;
+        box-shadow: none;
+        transition: opacity 0.4s;
+        @include mq('tab') {
+          padding: $space_s $space_4l;
+        }
+        @include mq() {
+          padding: $space_s $space_xl;
+          font-size: $font-size_default;
+          margin-right: $space_l;
+          margin-bottom: $space_l;
+        }
+        &:active {
+          -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+          box-shadow: none;
+        }
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+  .p-postMore {
+    padding: $space_s $space_xl;
+    box-sizing: border-box;
+    margin-bottom: $space_8l;
+  }
+  .p-postIdea:nth-of-type(3){
+    margin-bottom: $space_4l;
+  }
+}
